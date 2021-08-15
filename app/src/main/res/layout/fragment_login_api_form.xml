@@ -189,6 +189,23 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:orientation="vertical"
+          android:visibility="@{formData.usingGrocyHassAddOnLive ? View.VISIBLE : View.GONE}">
+
+          <com.google.android.material.radiobutton.MaterialRadioButton
+            style="@style/Widget.Grocy.RadioButton"
+            android:text="Use Port 8123 (URL points to an ordinary Home Assistant instance)"/>
+
+          <com.google.android.material.radiobutton.MaterialRadioButton
+            style="@style/Widget.Grocy.RadioButton"
+            android:text="Use Port 443 (URL points to a reverse proxy or to Nabu Casa)"/>
+
+        </LinearLayout>
+
         <com.google.android.material.card.MaterialCardView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
